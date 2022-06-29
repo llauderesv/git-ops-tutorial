@@ -1,1 +1,20 @@
-pod/po created
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: temp-po
+  name: temp-po
+  namespace: git-ops-tutorial
+spec:
+  containers:
+  - args:
+    - /bin/sh
+    - -c
+    - echo 'Hello GitOps'
+    image: busybox:1.28
+    name: temp-po
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
